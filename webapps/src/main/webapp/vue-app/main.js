@@ -7,13 +7,11 @@ const vuetify = new Vuetify({
   dark: true,
   iconfont: '',
 });
-
 // getting language of user
 const lang = eXo && eXo.env && eXo.env.portal && eXo.env.portal.language || 'en';
 
 const resourceBundleName = 'locale.addon.VuetifySample';
 const url = `${eXo.env.portal.context}/${eXo.env.portal.rest}/i18n/bundle/${resourceBundleName}-${lang}.json`;
-
 // getting locale ressources
 exoi18n.loadLanguageAsync(lang, url)
   .then(i18n => {
@@ -24,3 +22,4 @@ exoi18n.loadLanguageAsync(lang, url)
       vuetify,
     }).$mount('#vuetify_webpack_sample');
   });
+

@@ -6,7 +6,7 @@ const webpackCommonConfig = require('./webpack.common.js');
 const app = 'vuetify-webpack-sample';
 
 // add the server path to your server location path
-const exoServerPath = "/exo-server";
+const exoServerPath = "/home/exo/work/binaries/platform-6.3.x-SNAPSHOT";
 
 let config = merge(webpackCommonConfig, {
   output: {

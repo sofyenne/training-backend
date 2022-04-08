@@ -1,8 +1,10 @@
 org/exoplatform/training/Services/UserServiceRest.class
 exo-jpa-entities/entities.idx
+org/exoplatform/training/Services/JobExecution.class
 org/exoplatform/training/Services/UserService.class
 org/exoplatform/training/Entity/Users.class
 org/exoplatform/training/dto/UserDto.class
 org/exoplatform/training/Services/UserInterface.class
+org/exoplatform/training/Listener/UsersListener.class
 org/exoplatform/training/Services/MapperUser.class
 org/exoplatform/training/dao/UserDAO.class

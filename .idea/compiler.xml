@@ -6,11 +6,55 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="services" />
+        <module name="ecms-core-webui-seo" />
         <module name="vuetify-webpack-sample" />
         <module name="training-services" />
+        <module name="ecms-core-publication-plugins" />
+        <module name="ecms-core-connector" />
+        <module name="ecms-ext-authoring-services" />
+        <module name="ecms-ext-authoring-apps" />
+        <module name="ecms-ext-onedrive-webapp" />
+        <module name="ecms-core-webui-presentation" />
+        <module name="ecms-ext-authoring-webui" />
+        <module name="ecms-core-services" />
+        <module name="ecms-core-webui-explorer" />
+        <module name="ecms-core-viewer" />
+        <module name="ecms-testsuite-test" />
+        <module name="ecms-ext-webui" />
+        <module name="services" />
+        <module name="ecms-ext-gdrive-webapp" />
+        <module name="ecms-core-webui-clouddrives" />
+        <module name="ecms-core-webui-fcc" />
+        <module name="ecms-ext-gdrive-services" />
+        <module name="ecms-core-webui-administration" />
+        <module name="ecms-core-publication" />
+        <module name="ecms-core-webui" />
         <module name="webapps" />
+        <module name="ecms-core-webapp" />
+        <module name="ecms-core-search" />
+        <module name="ecms-ext-fastcontentcreator-portlet" />
+        <module name="ecms-ext-onedrive-services" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ecm-wcm-extension" target="11" />
+      <module name="ecms" target="11" />
+      <module name="ecms-apps" target="11" />
+      <module name="ecms-apps-portlet-administration" target="11" />
+      <module name="ecms-apps-portlet-clouddrives" target="11" />
+      <module name="ecms-apps-portlet-documents" target="11" />
+      <module name="ecms-apps-portlet-editors" target="11" />
+      <module name="ecms-apps-portlet-explorer" target="11" />
+      <module name="ecms-apps-portlet-presentation" target="11" />
+      <module name="ecms-apps-portlet-search" target="11" />
+      <module name="ecms-apps-portlet-seo" target="11" />
+      <module name="ecms-apps-portlet-transferrules" target="11" />
+      <module name="ecms-apps-resources-wcm" target="11" />
+      <module name="ecms-core" target="11" />
+      <module name="ecms-ext" target="11" />
+      <module name="ecms-packaging" target="11" />
+      <module name="ecms-social-integration" target="11" />
+      <module name="ecms-testsuite" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

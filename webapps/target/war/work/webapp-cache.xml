@@ -7,6 +7,10 @@
           <string>META-INF/exo-conf/configuration.xml</string>
           <string>vue-app/main.js</string>
           <string>vue-app/components/app.vue</string>
+          <string>vue-app/components/service/userService.js</string>
+          <string>vue-app/components/drawer.vue</string>
+          <string>vue-app/components/details.vue</string>
+          <string>vue-app/components/list.vue</string>
           <string>css/main.less</string>
           <string>index.html</string>
           <string>WEB-INF/web.xml</string>
@@ -38,7 +42,7 @@
           <columnNumber>17</columnNumber>
           <source>
             <modelId>org.example:vuetify-webpack-sample:1.0-SNAPSHOT</modelId>
-            <location>/home/exo/work/sources/product-management/webapps/pom.xml</location>
+            <location>/home/exo/work/sources/trainingbackend/webapps/pom.xml</location>
           </source>
         </location>
         <groupIdLocation>

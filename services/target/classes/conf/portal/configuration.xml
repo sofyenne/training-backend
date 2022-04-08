@@ -6,6 +6,14 @@
         <key>org.exoplatform.training.Services.UserServiceRest</key>
         <type>org.exoplatform.training.Services.UserServiceRest</type>
     </component>
+    <component>
+        <key>org.exoplatform.training.Services.UserInterface</key>
+        <type>org.exoplatform.training.Services.UserService</type>
+    </component>
+    <component>
+        <type>org.exoplatform.training.dao.UserDAO</type>
+    </component>
+
 
   <external-component-plugins>
         <target-component>org.exoplatform.commons.api.persistence.DataInitializer</target-component>
@@ -17,9 +25,40 @@
                 <values-param>
                     <name>changelogs</name>
                     <description>Change logs of Social RDBMS</description>
-                    <value>db/changelog/users.db.changelog-1.0.0.xml</value>
+                    <value>db/changelog/user.db.changelog-1.0.0.xml</value>
                 </values-param>
             </init-params>
         </component-plugin>
+    </external-component-plugins>
+    <external-component-plugins>
+        <target-component>org.exoplatform.services.listener.ListenerService</target-component>
+        <component-plugin>
+            <name>user-added-success</name>
+            <set-method>addListener</set-method>
+            <type>org.exoplatform.training.Listener.UsersListener</type>
+        </component-plugin>
+    </external-component-plugins>
+    <external-component-plugins>
+        <target-component>org.exoplatform.services.scheduler.JobSchedulerService</target-component>
+        <component-plugin>
+            <name>testjob</name>
+            <set-method>addPeriodJob</set-method>
+            <type>org.exoplatform.services.scheduler.PeriodJob</type>
+            <description>Job to print project is running</description>
+            <init-params>
+                <properties-param>
+                    <name>job.info</name>
+                    <description>details of the execution of the Quotes printer job</description>
+                    <property name="jobName" value="testjob"/>
+                    <property name="groupName" value="testjob"/>
+                    <property name="job" value="org.exoplatform.training.job.addPeriodJobProduct"/>
+                    <property name="repeatCount" value="0"/>
+                    <property name="period" value="${exo.training.job.period:30000}"/>
+                    <property name="startTime" value="+15000"/>
+                    <property name="endTime" value=""/>
+                </properties-param>
+            </init-params>
+        </component-plugin>
+
     </external-component-plugins>
 </configuration>

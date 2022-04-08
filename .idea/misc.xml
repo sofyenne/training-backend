@@ -2,6 +2,22 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-administration" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-clouddrives" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-documents" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-editors" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-explorer" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-presentation" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-search" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-seo" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/portlet-transferrules" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/apps/resources-wcm" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/core/core-configuration" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/ecm-wcm-extension" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/ext/authoring/apps" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/ext/clouddrives-gdrive/webapp" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/ext/clouddrives-onedrive/webapp" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecms/ext/fastcontentcreator/portlet" />
     <file type="web" url="file://$PROJECT_DIR$/webapps" />
   </component>
   <component name="MavenProjectsManager">
@@ -10,7 +26,18 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/webapps/pom.xml" />
         <option value="$PROJECT_DIR$/packaging/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecms/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../ecms/core/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecms/ecm-wcm-extension/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecms/ecms-packaging/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecms/ecms-social-integration/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecms/ext/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecms/testsuite/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">

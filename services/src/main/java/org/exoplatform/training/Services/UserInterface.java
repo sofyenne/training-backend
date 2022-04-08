@@ -2,6 +2,7 @@ package org.exoplatform.training.Services;
 
 import org.exoplatform.training.Entity.Users;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface UserInterface {
@@ -10,4 +11,8 @@ public interface UserInterface {
     Users SavOrUpdateUser(Users user) ;
 
     void deleteUser(Users u);
+    
+	Users getById(long id);
+
+    Users getByName(String name);
 }

@@ -7,9 +7,15 @@ import javax.persistence.*;
 
 @ExoEntity
 @Entity
-@Table(name = "users")
+@Table(name = "Users")
+@NamedQueries({
+        @NamedQuery(
+                name="findByName",
+                query = "SELECT u FROM Users u WHERE u.firstname LIKE :name"
+        )
+})
 public class Users {
-	
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id ;
@@ -18,7 +24,7 @@ public class Users {
     private String email;
     private int age ;
     private String password ;
-    public Users(){};
+    public Users(){}
 
     public long getId() {
         return id;
