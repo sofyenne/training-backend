@@ -15,6 +15,13 @@ public class UserDAO  extends GenericDAOJPAImpl<Users, Long> {
         query.setParameter("name",name);
         Users user = query.getSingleResult();
         return user ;
+    }
+
+    public List<Users> Search(String searchValue){
+        TypedQuery<Users> query = getEntityManager().createNamedQuery("search", Users.class);
+        query.setParameter("value" ,searchValue);
+        List<Users> users = query.getResultList();
+        return users ;
 
     }
 }

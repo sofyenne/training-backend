@@ -37,6 +37,16 @@
             <set-method>addListener</set-method>
             <type>org.exoplatform.training.Listener.UsersListener</type>
         </component-plugin>
+        <component-plugin>
+            <name>user-updated-success</name>
+            <set-method>addListener</set-method>
+            <type>org.exoplatform.training.Listener.UsersListener</type>
+        </component-plugin>
+        <component-plugin>
+            <name>user-finded-success</name>
+            <set-method>addListener</set-method>
+            <type>org.exoplatform.training.Listener.UsersListener</type>
+        </component-plugin>
     </external-component-plugins>
     <external-component-plugins>
         <target-component>org.exoplatform.services.scheduler.JobSchedulerService</target-component>
@@ -51,7 +61,7 @@
                     <description>details of the execution of the Quotes printer job</description>
                     <property name="jobName" value="testjob"/>
                     <property name="groupName" value="testjob"/>
-                    <property name="job" value="org.exoplatform.training.job.addPeriodJobProduct"/>
+                    <property name="job" value="org.exoplatform.training.Services.JobExecution"/>
                     <property name="repeatCount" value="0"/>
                     <property name="period" value="${exo.training.job.period:30000}"/>
                     <property name="startTime" value="+15000"/>

@@ -86,9 +86,10 @@ public class UserServiceRest implements ResourceContainer {
         }
         return Response.ok(users).build();
     }
-    
-    
-    
-    
-
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/search")
+    public List<Users>search(@QueryParam("value")String value) throws  Exception{
+        return userService.Search(value);
+    }
 }

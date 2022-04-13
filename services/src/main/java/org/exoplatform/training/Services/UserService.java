@@ -13,6 +13,13 @@ import java.util.List;
 public class UserService implements   UserInterface{
     private static final Log log =  ExoLogger.getLogger(UserServiceRest.class);
     private final UserDAO userDAO ;
+    public static HashMap<String,Integer>eventcounter = new HashMap<>();
+    static {
+        eventcounter.put("create",0);
+        eventcounter.put("update",0);
+        eventcounter.put("delete",0);
+        eventcounter.put("get",0);
+    }
     private final ListenerService listenerService;
     public UserService(UserDAO userDAO , ListenerService listenerService){
         this.userDAO = userDAO ;
@@ -21,6 +28,11 @@ public class UserService implements   UserInterface{
     @Override
     public List<Users> getall() throws Exception {
         return userDAO.findAll();
+    }
+
+    @Override
+    public List<Users> Search(String value) throws Exception {
+        return userDAO.Search(value);
     }
 
     @Override
@@ -43,12 +55,18 @@ public class UserService implements   UserInterface{
 
     @Override
     public void deleteUser(Users u) {
-        userDAO.delete(u);
+       userDAO.delete(u);
+
 
     }
     @Override
     public Users getById(long id) {
-    	Users users = userDAO.find(id);
+        Users users = null ;
+        try {
+             users = userDAO.find(id);
+            listenerService.broadcast("user-finded-success", this, users);
+        }
+        catch(Exception e){ log.error(e.getMessage());}
         return users ;
     }
 

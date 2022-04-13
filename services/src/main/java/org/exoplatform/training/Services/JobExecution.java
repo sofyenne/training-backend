@@ -8,9 +8,14 @@ import org.quartz.JobExecutionException;
 public class JobExecution implements Job{
 
     private static final Log log = ExoLogger.getLogger(JobExecution.class);
-
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        log.info("project is running!!!");
+        try {
+           log.info(UserService.eventcounter.get("create"));
+           log.info(UserService.eventcounter.get("get"));
+           log.info("done!!!!!!!!!!");
+        }catch(Exception e){
+            log.error(e.getMessage());
+        }
     }
 }

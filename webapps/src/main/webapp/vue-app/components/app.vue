@@ -58,7 +58,7 @@ import userlist from './list.vue';
 export default {
   name:'FirsPage',
   components :{
-    userlist
+    userlist,
   },
   data: function() {
     return {}; 

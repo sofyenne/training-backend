@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-btn color="green" style="margin-bottom:20px;margin-left:94%;" @click="opendrwer()" >Add new</v-btn>
+    <v-btn color="green" style="margin-bottom:20px;margin-left:94%;" @click="opendrwer()">Add new</v-btn>
     <v-data-table
       :headers="headers"
       :items="items"

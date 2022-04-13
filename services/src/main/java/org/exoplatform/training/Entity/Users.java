@@ -1,18 +1,16 @@
 package org.exoplatform.training.Entity;
 import org.exoplatform.commons.api.persistence.ExoEntity;
-
-
 import javax.persistence.*;
-
-
 @ExoEntity
 @Entity
 @Table(name = "Users")
-@NamedQueries({
+@NamedQueries(value = {
         @NamedQuery(
-                name="findByName",
+                name = "findByName",
                 query = "SELECT u FROM Users u WHERE u.firstname LIKE :name"
-        )
+        ),
+        @NamedQuery(name = "search",
+                query = "SELECT u FROM Users u WHERE  :value IN (u.lastname ,u.firstname,u.email)")
 })
 public class Users {
 

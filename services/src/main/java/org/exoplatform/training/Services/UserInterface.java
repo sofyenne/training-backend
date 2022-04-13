@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserInterface {
     List<Users>getall() throws Exception ;
-
+    List<Users> Search(String value) throws Exception ;
     Users SavOrUpdateUser(Users user) ;
 
     void deleteUser(Users u);
