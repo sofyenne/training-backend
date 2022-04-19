@@ -33,6 +33,8 @@
                    v-on="on" @click="detail(row.item)">
               <v-icon dark>mdi-book</v-icon>
             </v-btn>
+           
+            
           </td>
         </tr>
     </template></v-data-table>
@@ -44,9 +46,11 @@
 import Userservice from './service/userService';
 import drawer from './drawer.vue';
 import userDetails from  './details.vue';
+import ActivityActions from '../components/activity/ActivityActions.vue';
 export default {
   name:'UserList',
   components:{
+    ActivityActions,
     drawer,
     userDetails
   },

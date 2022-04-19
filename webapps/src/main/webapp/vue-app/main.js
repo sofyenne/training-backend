@@ -1,6 +1,7 @@
 import app from './components/app.vue';
 import axios from 'axios';
 import '../css/main.less';
+import './components/activity/extentions.js';
 Vue.use(Vuetify , axios);
 
 const vuetify = new Vuetify({
